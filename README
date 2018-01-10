@@ -1,0 +1,55 @@
+Tema 1
+
+Exercitiul 1
+
+	Pentru transformarea numarului dint-o baza in alta am folosit reprezentarea
+acestuia sub forma de vector. Pentru inceput am inversat sirul sursa primit ca
+parametru al functiei, apoi l-am intransformat intr-un vector de numere intregi
+folosind codurile ascii. Folosind operatiile aritmetice aplicate asupra numerelor
+mari (reprezentate sub forma de vector ca in cazul de fata) am transformat mai
+intai numarul in baza 10 daca nu era deja si apoi din baza 10 in baza b2 data ca
+parametru. In final am revenit la reprezentarea rezultatului sub forma de sir de
+caractere.
+	Fisiere sursa: baza.m si inmultire.m
+
+Exercitiul 2
+
+	Pentru a construi matricea in zigzag initializam matricea rezultat cu 0.
+Parcurgem toate elementele de la 0 la n^2 - 1 si in acelasi timp ne deplasam cu
+indicii i si j pe diagonalele matricii, atribuind elementului de pe acea pozitie
+valoarea de la pasul respectiv. Se va face distinctia intre diagonalele pare si
+cele impare, diferenta fiind directia de deplasare (la unele ne deplasam de sus
+in jos, iar la celelalte invers).
+	Fisiere sursa: zigzag.m
+
+Exercitiul 3
+
+	Pentru a genera arborele corespunzator codului Morse folosesc cell arrays.
+In functia 'morse' generez arborele incepand de la ultimul nivel catre primul.
+Pentru a codifica un caracter folosesc o functie recursiva de cautare care atunci
+cand gaseste respectivul caracter intoarce codul lui. Pentru a deccodifica un
+caracter urmez calea indicata de codul sau in arbore si returnez caracterul sau,
+daca nu exista, caracterul '*'. Functiile care fac codificare/decodificare
+multipla se folosesc de cele doua functii descrise mai sus, apelandu-le pentru
+fiecare caracter primit. In cazul decodificarii multiple mai intai despart sirul
+primit ca argument intr-un vector de siruri de caractere dupa spatiile din sir.
+	Fisiere sursa: morse.m, morse_decode.m, morse_encode.m, cautare.m,
+multiple_decode.m, multiple_encode.m
+
+Exericitul 4
+
+	Acest exercitiu reprezinta un joc X si 0 pe o tabla 3x3. Pentru salvarea in
+memorie a tablei de joc am folosit un vector linie T. Initial acesta contine doar
+spatii, urmand apoi sa se adauge X si 0. La inceput se prezinta instructiunile
+jocului, iar apoi jucatorul alege caracterul cu care doreste sa joace. Daca alege
+X va incepe jocul, iar in caz contrar va incepe calculatorul. Pentru a introduce
+mutarea sa jucatorul va introduce o valoare de la 1 la 9, pozitiile corespunzatoare
+fiind afisate in instructiuni. Cat timp mai exista loc liber pe tabla jucatorul
+si calculatorul muta alternativ. In caz ca unul din ei castiga sau se umple tabla
+se va afisa scorul dintre ei, iar jucatorul va fi intrebat daca doreste sa mai
+joace, iar in caz contrar jocul se opreste. Pentru a juca eficient, calculatorul
+verifica mai intai daca poate muta astfel incat sa castige, apoi daca poate bloca
+jucatorul, iar apoi la plasa intr-unul din colturi, pe centru sau pe orice alta
+poziti libera.  
+	Fisiere sursa: joc.m, isWon.m, mutarePlayer.m, mutarePC.m, afisare.m,
+freespace.m
